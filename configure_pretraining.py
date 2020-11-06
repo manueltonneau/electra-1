@@ -44,6 +44,7 @@ class PretrainingConfig(object):
     self.num_warmup_steps = 10000
 
     # training settings
+    self.init_checkpoint = None
     self.iterations_per_loop = 200
     self.save_checkpoints_steps = 1000
     self.num_train_steps = 1000000
@@ -62,7 +63,6 @@ class PretrainingConfig(object):
     self.embedding_size = None  # bert hidden size by default
     self.vocab_size = 30522  # number of tokens in the vocabulary
     self.do_lower_case = True  # lowercase the input?
-    self.init_checkpoint= None
 
     # generator settings
     self.uniform_generator = False  # generator is uniform at random
